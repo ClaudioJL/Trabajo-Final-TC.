@@ -54,6 +54,14 @@ void loop() {
       digitalWrite(Semaforo_Verde_1, LOW);
       digitalWrite(Semaforo_Amarillo_1, HIGH);
       delay(1000); // Espera de 1 segundo
+
+      // Intermitencia del semáforo amarillo
+      for (int i = 0; i < 5; i++) {
+        digitalWrite(Semaforo_Amarillo_1, HIGH);
+        delay(100); // 100 milisegundos
+        digitalWrite(Semaforo_Amarillo_1, LOW);
+        delay(100); // 100 milisegundos
+      }
       estadoActual = S3;
       break;
 
